@@ -1,6 +1,5 @@
 .main {
-  color: $white;
-  background: $main-text-color;
+  background-color: $main-text-color;
 
   &__content {
     display: grid;
@@ -8,45 +7,39 @@
     padding-block: 60px;
 
     @include on-tablet {
-      padding-block: 120px;
       row-gap: 120px;
+      padding-block: 120px;
     }
   }
+}
 
-  &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    background-color: $white;
+.button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 60px;
+
+  &__explore {
+    padding: 0 48px;
+    width: 324px;
     height: 56px;
-    width: 278px;
-    margin: 0 auto;
-    border: none;
-
-    color: $main-text-color;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
+    border-radius: 50px;
     font-weight: 700;
     line-height: 27px;
+    font-size: 16px;
+    border: none;
     cursor: pointer;
+  }
 
-    @include on-tablet {
-      width: 392px;
-    }
+  &__explore:hover {
+    height: 56px;
+    border-radius: 40px;
+    box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.4);
+  }
 
-    @include on-desktop {
-      width: 324px;
-
-    }
-
-    &:hover {
-      box-shadow: 1px 4px 16px 0  rgba(232, 232, 240, 0.4);
-    }
-
-    &:active {
-      box-shadow: 1px 4px 16px  rgba(232, 232, 240, 0.64);
-    }
+  &__explore:active {
+    border-radius: 40px;
+    box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.64);
   }
 }

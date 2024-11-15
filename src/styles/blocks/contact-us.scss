@@ -1,7 +1,7 @@
 .contacts__grid {
   @include page-grid;
 
-  color: $white;
+  color: #fff;
   margin-top: 48px;
 }
 
@@ -28,11 +28,10 @@
   border: none;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 
-  &:hover {
+  &__input:hover {
     border: 1px solid #d5d7de;
-
   }
 }
 
@@ -47,7 +46,7 @@
   padding: 14px 16px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 
 .contacts__button {
@@ -66,7 +65,7 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 1px 4px 16px 0  rgba(232, 232, 240, 0.4);
+    box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.4);
   }
 
   &:active {
@@ -86,30 +85,11 @@
   }
 
   &__value {
-    position: relative;
     color: $white;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     line-height: 140%;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -8px;
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: $white;
-
-      transition: transform 0.3s;
-      transform: scale(0);
-      transform-origin: center;
-    }
-
-    &:hover::after {
-      transform: scale(1);
-    }
   }
 
   &__item {
